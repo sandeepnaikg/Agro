@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans bg-surface text-stone-800 antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-primary font-bold;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl tracking-tight leading-[1.1];
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl tracking-tight leading-snug;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl leading-normal;
+  }
+}
+
+@layer components {
+  .label-tech {
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .section-padding {
+    @apply py-section px-6 md:px-12 lg:px-20;
+  }
+
+  @media (max-width: 768px) {
+    .section-padding {
+      @apply py-section-sm;
+    }
+  }
+
+  .section-bg-parchment {
+    background: radial-gradient(circle at 10% 20%, #FAF8F4 0%, #F0EBE3 90%);
+  }
+
+  .section-bg-stone {
+    @apply bg-surface-muted;
+  }
+
+  .product-card {
+    @apply bg-white rounded-card p-5 shadow-card border border-stone-100/80
+           hover:shadow-card-hover hover:border-primary/10 transition-all duration-300;
+  }
+
+  .product-img-wrap {
+    @apply w-full aspect-square rounded-2xl bg-parchment overflow-hidden
+           flex items-center justify-center p-3 border border-stone-100;
+  }
+
+  .product-img {
+    @apply w-full h-full object-contain group-hover:scale-105 transition-transform duration-500;
+  }
+
+  .trust-card {
+    @apply bg-white rounded-3xl p-6 shadow-card border border-stone-100/80
+           hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+  .badge-cert {
+    @apply inline-flex items-center gap-1 text-[9px] font-bold label-tech
+           px-2 py-0.5 rounded-full bg-primary/5 text-primary;
+  }
+
+  .btn-terracotta {
+    @apply bg-secondary text-white hover:bg-[#9A4E2E] active:scale-[0.98] transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-light active:scale-[0.98] transition-all duration-200;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/40;
+  }
+
+  /* utility bar (36px) + navbar (68px) */
+  .page-offset-top {
+    @apply pt-[106px];
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .hero-ken-burns {
+    animation: ken-burns 22s ease-out forwards;
+  }
+
+  @keyframes ken-burns {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+  }
+
+  .hero-wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    line-height: 0;
+  }
+}
+
+select, input, textarea {
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus, select:focus, textarea:focus {
+  @apply ring-2 ring-primary/10 border-primary/20 bg-white outline-none;
+}

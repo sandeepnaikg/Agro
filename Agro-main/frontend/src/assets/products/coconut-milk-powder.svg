@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Clean White Background (1:1 Square) -->
+  <rect width="100" height="100" fill="#ffffff" />
+
+  <!-- Natural soft shadows below elements -->
+  <ellipse cx="36" cy="65" rx="22" ry="5" fill="#000" fill-opacity="0.05" />
+  <ellipse cx="74" cy="76" rx="15" ry="4" fill="#000" fill-opacity="0.12" />
+
+  <!-- 1. Fresh Sourced Ingredient (70% space) -->
+  <g opacity="0.95">
+    <!-- Half Coconut Shell -->
+    <ellipse cx="35" cy="48" rx="17" ry="14" fill="#5C3A21" transform="rotate(-10 35 48)" />
+    <ellipse cx="35" cy="48" rx="14.5" ry="11.5" fill="#ffffff" transform="rotate(-10 35 48)" />
+    <ellipse cx="35" cy="48" rx="12" ry="9.5" fill="#fcfcf9" transform="rotate(-10 35 48)" />
+    <circle cx="35" cy="48" r="3" fill="#FAF5EE" opacity="0.3" />
+  </g>
+
+  <!-- 2. Premium 3D Wood Bowl of Ground Powder (30% space) -->
+  <g>
+    <!-- Outer Dark Wood Rim -->
+    <ellipse cx="74" cy="74" rx="19" ry="14" fill="#8B5A2B" stroke="#5C3A21" stroke-width="0.8" />
+    <!-- Inner Warm Wood Bowl -->
+    <ellipse cx="74" cy="73.5" rx="16.5" ry="11.5" fill="#CD853F" />
+    <!-- Wood grain details -->
+    <ellipse cx="74" cy="73.5" rx="14" ry="9" fill="none" stroke="#8B5A2B" stroke-width="0.5" stroke-dasharray="3 7" opacity="0.3" />
+    
+    <!-- Heap of Ground Powder -->
+    <path d="M59 73 C65 54, 83 54, 89 73 Z" fill="#F5ECE0" />
+    
+    <!-- Subtle highlights on powder heap -->
+    <ellipse cx="70" cy="64" rx="3" ry="1.5" fill="#ffffff" opacity="0.15" />
+  </g>
+</svg>

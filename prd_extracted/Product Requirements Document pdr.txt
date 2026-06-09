@@ -1,0 +1,186 @@
+﻿Product Requirements Document (PRD)
+ðŸŒ¿Product Name
+Avsan Chakra Kernin Eco Solutions Pvt Ltd â€“ Eco Products E-Commerce Platform
+1. Purpose of the Product
+The purpose of this platform is to build a centralized and trusted digital marketplace for eco-friendly agricultural and natural products offered by Avsan Chakra Kernin Eco Solutions Pvt Ltd.
+The platform is designed to allow customers to explore, understand, and purchase products in both dried form and powder form through a secure and user-friendly online experience.
+A major focus of the platform is to create direct visibility between customers and farmers by connecting customers with a trusted network of  12,000+ farmers, promoting transparency, sustainability, and responsible sourcing.
+The primary goal is to make natural and eco-based products easily accessible while supporting farmers, encouraging sustainable agriculture, and building a strong digital presence for the company.
+2.  Problem / Pain Point
+Customers and businesses often face difficulty finding reliable and eco-friendly agricultural products in one trusted place.
+Products are usually spread across multiple sources, and customers may not have complete information regarding quality, availability, and sourcing.
+There is also limited direct visibility between farmers and customers, which reduces transparency and trust.
+Farmers may also face challenges reaching larger markets and presenting their products directly to customers.
+This platform solves these challenges by bringing together all products in one organized digital platform while creating direct farmer connection, clear product information, and a smooth purchasing experience.
+3.  Why This Product
+The demand for sustainable, natural, and eco-friendly products continues to increase across homes, businesses, and industries.
+Customers are looking for trusted products that are easy to access and clearly connected to their source.
+This platform helps customers discover products in one place, understand their sourcing, and purchase with confidence.
+It also supports farmers by improving market access and increasing visibility of their contribution.
+The platform strengthens customer trust, supports sustainable agriculture, and creates long-term growth opportunities for the company.
+4.  Website Design and User Experience
+The website will follow a clean, modern, and professional design focused on simplicity and easy navigation.
+The platform should be:
+ðŸ“± Mobile-friendly
+ðŸ’» Easy to access
+ðŸŽ¨ Visually appealing
+ðŸ›’ Customer-friendly
+âš¡ Fast and responsive
+ðŸ  Home Page Design
+The homepage will include:
+ðŸŒ¿ Company logo and brand identity
+ðŸ“‚ Navigation menu
+ðŸ–¼ï¸ Main banner with company mission
+â­ Featured products
+ðŸ›ï¸ Product categories
+â™»ï¸ Sustainability message
+ðŸŒ¾ 12,000+ farmer network highlight
+ðŸ‘¨â€ðŸŒ¾ Complete farmer database overview
+ðŸŒ± Product sourcing transparency section
+â­ Customer reviews/testimonials
+ðŸŽ Promotional offers
+ðŸ“ž Contact and inquiry section
+ðŸ“„ Footer with company information
+Homepage Message Example:
+â€œConnecting sustainable agricultural products directly from trusted farmers to customers through eco-friendly solutions.â€
+5.  Product Categories and Listings
+Products will be available in both dried form and powder form.
+Each product page will include:
+ðŸ–¼ï¸ Product image
+ðŸ“ Product name
+ðŸŒ¿ Dried form / powder form selection
+ðŸ“„ Description
+ðŸŒ± Uses and benefits
+âš–ï¸ Quantity/weight
+ðŸ’° Price
+ðŸ“¦ Stock availability
+ðŸ›’ Add to cart
+ðŸ“‹ Bulk order option
+Product Categories
+Examples include:
+ðŸ¥­ Mango Seed Powder / Dried Mango Seed
+Tamarind Seed Powder / Dried Tamarind Seed
+Tamarind Powder
+ðŸ¥• Carrot Powder / Dried Carrot
+Beetroot Powder / Dried Beetroot
+ðŸŒ¿ Moringa Powder / Dried Moringa
+ðŸ¥” Potato Powder / Dried Potato
+ðŸ… Tomato Powder / Dried Tomato
+Herbal powders
+Plant-based powders
+Agricultural raw materials
+Organic processed products
+Seasonal products
+Customized product requirements
+6.  Farmer Network and Database
+The platform will highlight the companyâ€™s farmer ecosystem.
+Features include:
+ðŸ‘¨â€ðŸŒ¾ Farmer profiles
+ðŸ“ Farmer name
+ðŸ“ Village/location
+ðŸŒ¾ Product supplied
+âš–ï¸ Quantity details
+ðŸŒ± Product sourcing information
+ðŸ” Transparency of product origin
+ðŸŒ¾ Total connected farmers display (12,000+ farmers)
+ðŸ¤ â€œMeet Our Farmersâ€ section
+This feature creates trust, transparency, and stronger customer engagement.
+7.  Search and Filters
+Customers can easily search and filter products based on:
+ðŸ”Ž Product name
+ðŸŒ¿ Powder products
+ðŸƒ Dried products
+ðŸŒ° Seed powders
+ðŸ¥• Vegetable powders
+ðŸ“… Seasonal products
+ðŸ’° Price range
+ðŸ“¦ Availability
+8.  Customer Shopping Features
+The website will provide:
+ðŸ” Secure registration and login
+ðŸ›ï¸ Product browsing
+â¤ï¸ Wishlist
+ðŸ›’ Shopping cart
+âž• Quantity update
+âŒ Remove items
+ðŸ’³ Secure checkout
+ðŸ“ Address management
+âœ… Order confirmation
+ðŸ“¦ Order tracking
+ðŸ‘¤ Customer account management
+â­ Reviews and ratings
+9.  Payment Options
+Available payment methods:
+ðŸ“± UPI
+ðŸ’³ Debit Card
+ðŸ’³ Credit Card
+ðŸ¦ Net Banking
+ðŸ“¦ Cash on Delivery (if available)
+10.  Bulk Orders and Business Inquiry
+For industries and large buyers:
+ðŸ“‹ Bulk order requests
+ðŸ“¦ Custom quantity requests
+ðŸ¤ Business inquiry form
+ðŸ“ž Contact sales support
+Example:
+â€œFor bulk and customized requirements, contact our business team.â€
+11.  About Us
+This page includes:
+ðŸŒ¿ Company introduction
+ðŸŽ¯ Mission
+ðŸš€ Vision
+â™»ï¸ Sustainability commitment
+ðŸ‘¨â€ðŸŒ¾ Farmer partnerships
+ðŸ“ˆ Business growth journey
+12. Contact and Support
+Includes:
+ðŸ“ž Phone number
+âœ‰ï¸ Email address
+ðŸ“ Office address
+ðŸ“ Contact form
+ðŸ¤ Customer support assistance
+13. â­ Reviews and Testimonials
+The website can display:
+â­ Customer reviews
+ðŸ’¬ Buyer feedback
+ðŸ¤ Business client feedback
+ðŸ‘¨â€ðŸŒ¾ Farmer testimonials
+14.  Certifications and Quality Assurance
+Display certifications such as:
+ðŸ“„ Organic certification
+ðŸ›¡ï¸ Food safety certification
+ðŸŒ Export/quality approvals
+âœ”ï¸ Product quality standards
+15.  Sustainability Impact
+Highlight company impact:
+ðŸŒ¾ 12,000+ farmers connected
+ðŸŒ¿ Eco-friendly sourcing
+â™»ï¸ Sustainable agriculture support
+ðŸŒ± Natural product availability
+ðŸŒŽ Environmental responsibility
+16. Admin Dashboard
+Internal admin features:
+âž• Add/update products
+ðŸ“¦ Manage inventory
+ðŸ›’ Manage orders
+ðŸ‘¥ Customer details
+ðŸŒ¾ Farmer database management
+ðŸ“ Upload sourcing information
+ðŸ“ˆ Reports and analytics
+ðŸ’¼ Sales overview
+17.  Target Users
+Target audience includes:
+ðŸ  Individual customers
+ðŸ‘¨â€ðŸ‘©â€ðŸ‘§â€ðŸ‘¦ Families
+ðŸ¢ Businesses
+ðŸ­ Food industries
+ðŸŒ¿ Natural product buyers
+ðŸ›ï¸ Retail partners
+ðŸ¤ Distributors
+ðŸŒ Export buyers
+ðŸ“¦ Bulk purchase customers
+ðŸ‘¨â€ðŸŒ¾ Farmers connected with the company
+18.  Project Overview / Summary
+The Avsan Chakra Kernin Eco Solutions Pvt Ltd Eco Products E-Commerce Platform is designed as a complete digital marketplace for sustainable agricultural and eco-friendly products.
+The platform provides products in both dried and powder forms, enables secure online purchasing, and creates direct transparency between customers and the companyâ€™s trusted 12,000+ farmer network.
+With a modern website design, organized product categories, secure payments, farmer visibility, customer-friendly navigation, and sustainability-focused operations, the platform supports long-term business growth while promoting eco-friendly solutions and strengthening farmer-community connections.

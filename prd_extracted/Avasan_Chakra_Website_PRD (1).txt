@@ -1,0 +1,478 @@
+﻿AVASAN CHAKRA
+Farm to Future. Pure. Natural. Powerful.
+WEBSITE PRODUCT REQUIREMENTS DOCUMENT
+Version 1.0  â€¢  May 2026
+Prepared for: Avasan Chakra Founders & Dev Team
+60+ Products
+8 Categories
+B2C + B2B
+Export Ready
+Vegetable & Fruit Powders
+Dehydrated, Health, RTU, B2B
+Retail + Bulk Orders
+Export-Grade Certified
+1. Project Overview
+Avasan Chakra is a farm-to-table food brand specialising in dehydrated vegetable powders, fruit powders, health nutrition blends, and ready-to-use culinary ingredients. The website must serve as a premium digital storefront that connects farmers, consumers, and B2B buyers in a seamless, trustworthy, and visually compelling experience.
+1.1 Vision Statement
+Build Indiaâ€™s most trusted platform for natural dehydrated food products â€” rooted in farmer transparency, driven by nutrition science, and designed for modern Indian households and global export buyers.
+1.2 Target Audiences
+Retail Consumers
+Health-conscious individuals, homemakers, fitness enthusiasts, and urban cooks seeking natural alternatives
+B2B Buyers
+Food processors, restaurants, cloud kitchens, FMCG brands, nutraceutical companies, and exporters
+Farmers & Suppliers
+Partner farmers whose produce data, stories, and certifications are showcased on the platform
+Distributors
+Bulk buyers and regional distributors who need volume pricing and quote management
+1.3 Design Philosophy
+Unique, earthy-modern aesthetic: deep greens, warm naturals, clean whitespace
+Full-screen hero video on homepage: farm footage, harvesting, and product processing
+Farmer-first storytelling: every product traces back to a real farmer or region
+Subscription-first mindset: recurring purchase model baked into UX from day one
+Mobile-first responsive design: optimised for Indian smartphone users
+2. Homepage Design
+The homepage is the flagship experience. It must immediately communicate trust, naturalness, and brand story through rich visuals and farmer data. Every scroll section must earn its place.
+2.1 Hero Section (Full-Screen Video)
+Video Background
+Autoplay, muted, looping 4K video: farm landscapes, harvesting, dehydration process, finished products
+Overlay Text
+Bold headline: â€˜From Our Farms to Your Kitchenâ€™ with tagline and dual CTAs
+Primary CTA
+â€˜Shop Productsâ€™ button â€” links to product catalogue
+Secondary CTA
+â€˜Our Farmersâ€™ button â€” smooth-scrolls to Farmer Database section
+Video Fallback
+High-quality full-screen image fallback for slow connections and mobile data saver mode
+Scroll Indicator
+Animated arrow nudging users to scroll down
+Autoplay Policy
+Compliant with browser autoplay policies: muted by default, user can unmute
+2.2 Farmer Database Section
+This is the most unique section of the homepage â€” a real-time, scrollable showcase of partner farmers. This builds trust, differentiates the brand, and tells the origin story of every product.
+Farmer Cards
+Photo, name, village/district, state, years of association, crops grown, certifications held
+Farm Map
+Interactive India map with pin markers for each partner farm; clicking a pin opens farmer profile
+Live Stats Bar
+Animated counters: Total Farms, States Covered, Acres Under Cultivation, Farmers Empowered
+Filter by Crop
+Users can filter farmer cards by crop type (e.g., show only tomato or drumstick farmers)
+Farmer Story
+Short 2-line quote or story from each farmer in their own words
+Certifications
+Badges: Organic Certified, FSSAI Approved, Export-Grade, No Pesticide
+Seasonality Tag
+Shows current harvest season status for each farmerâ€™s produce
+CTA per Card
+â€˜Products from this Farmâ€™ links to filtered product page showing that farmerâ€™s products
+2.3 Product Showcase Strip
+Category Tabs
+Horizontally scrollable tabs: All, Vegetable Powders, Fruit Powders, Dehydrated, Health, B2B
+Product Cards
+Product image, name, weight options, price, â€˜Add to Cartâ€™, and subscription toggle
+Featured Badge
+Editorâ€™s Pick, Bestseller, New Arrival, and Seasonal tags on product cards
+Quick View
+Click-to-expand modal with full product details without leaving homepage
+View All Link
+Prominent â€˜Explore All 60+ Productsâ€™ button at section end
+2.4 Why Avasan Chakra (Trust Section)
+Icon Cards
+6 icon cards: 100% Natural, Farm-Sourced, No Preservatives, FSSAI Certified, Export Quality, Eco Packed
+Certifications Strip
+Logo strip of all certifications and quality marks
+Process Explainer
+3-step visual: Farm Harvest â†’ Dehydration Process â†’ Packed & Delivered
+2.5 Subscription Teaser
+A dedicated homepage section driving users into subscription plans with a compelling value proposition.
+Headline
+â€˜Never Run Out. Subscribe & Save up to 20%â€™
+Plan Preview Cards
+3 plan cards (Starter, Family, Pro) with key highlights and monthly savings shown
+Subscription CTA
+â€˜Choose Your Planâ€™ button linking to full Subscription Plans page
+Social Proof
+Subscriber count: â€˜2,400+ families subscribe monthlyâ€™ with star ratings
+2.6 Recipe & Usage Ideas
+Recipe Cards
+Visual recipe cards showing how to use products: Tomato Powder Pasta Sauce, Beetroot Smoothie Bowl, etc.
+Video Recipes
+Short 30-second embedded recipe reels from Instagram or YouTube
+Ingredient Tags
+Each recipe tags the Avasan Chakra products used, linking to product page
+User-Generated
+Community recipe submissions featured with user photo and handle
+2.7 Testimonials & Social Proof
+Customer Reviews
+Scrolling carousel of verified buyer reviews with star ratings, photo, and product purchased
+Media Coverage
+Logo strip of press mentions and media features
+Instagram Feed
+Live embedded grid of @avasanchakra posts
+3. Product Catalogue
+3.1 Product Categories
+Category
+Count
+Key Products
+Vegetable Powders
+13
+Tomato, Beetroot, Spinach, Onion, Curry Leaf
+Fruit Powders
+6
+Banana, Amla, Orange, Guava, Coconut
+Dehydrated Vegetables
+11
+Onion Flakes, Garlic Flakes, Tomato Slices
+Dehydrated Fruits
+3
+Banana Chips, Mango Slices, Papaya
+Health & Nutrition
+6
+Immunity Booster, Greens Mix, Protein Veg Mix
+Ready-to-Use Ingredients
+6
+Soup Mix, Curry Base, Seasoning Blends
+B2B / Industrial
+6
+Bulk Powders, Nutraceutical, Export-Grade
+Future Expansion
+8
+Millet Mixes, Freeze-Dried, Kids Nutrition
+3.2 Product Listing Page Features
+Search Bar
+Live search with autocomplete across all 60+ products
+Advanced Filters
+Filter by: Category, Use Case, Dietary Need, Price Range, Weight, Certification, Farmer Origin
+Sort Options
+Sort by: Bestselling, Price Low-High, Newest, Rating, Alphabetical
+Grid / List Toggle
+Switch between card grid and detailed list view
+Lazy Loading
+Infinite scroll with skeleton loading states for fast perceived performance
+Subscription Toggle
+Per-product toggle: One-time Purchase vs Subscribe & Save (shows % saving)
+3.3 Product Detail Page
+Hero Image Gallery
+Multi-image slider with zoom, 360Â° view, and video tab showing product in use
+Farmer Origin Badge
+Linked badge: â€˜Sourced from Ravi Kumarâ€™s farm, Vizianagaramâ€™ â€” clicks to farmer profile
+Weight Options
+Toggle buttons for weight variants: 50g, 100g, 250g, 500g, 1kg, 5kg
+Nutritional Panel
+Structured table: Calories, Protein, Fibre, Vitamins, Minerals per 100g
+Usage Suggestions
+Serving ideas, recipes, and usage quantity guide (e.g., â€˜1 tsp per servingâ€™)
+Shelf Life & Storage
+Clearly displayed shelf life, storage conditions, and packaging info
+Certifications
+Visual badge row: FSSAI, Organic, Export-Grade, Allergen-Free
+Subscription Option
+Frequency selector (weekly/bi-weekly/monthly) with price calculator showing savings
+Related Products
+Algorithmic â€˜You may also likeâ€™ and â€˜Often bought togetherâ€™ sections
+Reviews Section
+Verified buyer reviews with photo, rating, helpful votes, and admin response
+Pincode Checker
+Delivery availability and ETA checker by pincode
+4. Subscription Plans
+Subscriptions are a core revenue driver. The subscription system must be intuitive, flexible, and clearly communicate savings and convenience benefits to convert one-time buyers into recurring customers.
+4.1 Subscription Plan Tiers
+Starter
+Family
+Wellness Pro
+B2B Bulk
+â‚¹299 / month
+â‚¹699 / month
+â‚¹1,299 / month
+Custom quote
+Up to 3 products/month
+Up to 8 products/month
+Unlimited products
+Bulk kg quantities
+100g pack sizes
+250g pack sizes
+500g pack sizes
+Negotiated pricing
+5% discount
+12% discount
+20% discount
+Volume discounts
+Free delivery above â‚¹499
+Free delivery always
+Free express delivery
+Monthly invoicing
+Skip or pause anytime
+Skip, pause, swap
+Full flexibility
+Dedicated account
+Email support
+Priority support
+Dedicated manager
+SLA guarantee
+Standard packaging
+Eco packaging
+Custom packaging
+Export documentation
+Monthly recipe booklet
+Nutritionist access
+Sample dispatch
+4.2 Subscription Features
+Flexible Frequency
+Weekly, bi-weekly, and monthly delivery cycles per product
+Smart Swap
+Swap any product in your box up to 48 hours before dispatch
+Skip a Delivery
+One-tap delivery skip without cancellation
+Pause Subscription
+Pause for up to 3 months (travel, stock-up)
+Auto-Replenishment
+AI-predicted reorder based on usage patterns
+Subscription Box Builder
+Drag-and-drop interface to customise your monthly box
+Savings Dashboard
+Shows cumulative savings vs one-time purchases since subscribing
+Renewal Reminders
+SMS + email reminders 3 days before next billing cycle
+Gift Subscriptions
+Buy a 3/6/12-month subscription as a gift with personalised card
+5. Farmer Database Module
+The Farmer Database is Avasan Chakraâ€™s most distinctive feature â€” a full transparency layer showing exactly where products come from. This page is both a trust signal and a brand story.
+5.1 Farmer Profile Data Fields
+Farmer ID
+Unique AC-F-XXXX identifier for traceability
+Name & Photo
+Full name and high-quality farm photo
+Location
+Village, Mandal, District, State, and GPS coordinates for map pin
+Farm Size
+Total acres under cultivation and crops currently grown
+Association Since
+Year they joined the Avasan Chakra network
+Certifications
+Organic, FSSAI, pesticide-free, export-grade status
+Products Linked
+All Avasan Chakra products sourced from this farmer
+Harvest Calendar
+Seasonal availability chart showing peak harvest months per crop
+Farmer Quote
+A personal quote or message from the farmer (in Telugu + English)
+Quality Score
+Internal quality rating updated each harvest batch
+5.2 Farmer Database Page Features
+Interactive Map
+India map with farm location pins grouped by state; click pin to view farmer card
+Search & Filter
+Search by name, crop, district, state, or certification type
+Stats Dashboard
+Live counters: Farmers Onboarded, States, Crops, Acres, Batches Processed
+Batch Traceability
+Each product batch links to the specific farmer lot and harvest date
+Farmer Spotlight
+Monthly featured farmer with extended story and photo essay
+Download Profile
+Farmers can download their digital certification card as PDF
+Farmer Login
+Secure portal for farmers to update harvest dates and stock availability
+6. B2B / Industrial Portal
+6.1 B2B Features
+Separate B2B Landing
+Dedicated B2B page with industrial-focused messaging and product specs
+Bulk Quote Request
+Structured form: company name, product, quantity (kg), delivery frequency, destination
+Tiered Pricing
+Volume-based pricing tiers displayed (e.g., 50kg / 100kg / 500kg / 1 tonne)
+Sample Request
+Request 50g free samples of any product before bulk order
+COA Downloads
+Certificate of Analysis, FSSAI licence, and export certificates downloadable per product
+GST Invoice
+Automatic GST-compliant invoice generation for B2B orders
+B2B Account Dashboard
+Order history, repeat order button, invoice download, and account manager contact
+Export Documentation
+Customs-ready documents for international B2B buyers
+NDA / MOA
+Digital agreement signing for long-term supply contracts
+7. User Account & Authentication
+Registration
+Email, mobile OTP, Google SSO, and Apple ID sign-in
+Profile
+Name, address book, dietary preferences, and notification settings
+Order History
+Full order timeline with tracking, invoice, and reorder button
+Subscription Manager
+Manage all active subscriptions: swap, skip, pause, or cancel
+Wishlist
+Save products for later; shareable via link or WhatsApp
+Loyalty Points
+Green Points earned per purchase, redeemable on next order
+Referral Program
+â€˜Refer & Earnâ€™ with unique referral code and cashback tracker
+Health Profile
+Optional health goal input (immunity, weight loss, fitness) for personalised product recs
+Review History
+Products purchased and reviewed; prompt to review unreviewd items
+8. Cart & Checkout
+Persistent Cart
+Cart saved across sessions and devices when logged in
+Subscription Indicator
+Clear visual showing which items are one-time vs subscription
+Coupon & Promo
+Coupon code input with real-time discount calculation
+Address Management
+Multiple saved addresses with default selector
+Delivery Slots
+Date-based delivery slot booking (morning / afternoon / evening)
+Payment Methods
+UPI (PhonePe, GPay, Paytm), Net Banking, Cards, COD, EMI, Wallets
+Razorpay / Cashfree
+Secure PCI-DSS-compliant payment gateway integration
+Order Summary
+Itemised summary with GST breakup before final payment
+Confirmation
+Real-time order confirmation via email, SMS, and WhatsApp
+Pincode Check
+Delivery feasibility and ETA shown before checkout completion
+9. Additional Website Features
+9.1 Nutrition & Wellness Hub
+Blog
+SEO articles on sustainable eating, dehydrated food benefits, and Ayurvedic ingredients
+Recipe Library
+300+ recipes tagged by product, occasion, dietary need, and cuisine
+Nutritionist Tips
+Expert-curated advice on integrating powders into daily cooking
+Video Content
+How-to-use videos, farm tour vlogs, and product unboxing reels
+9.2 Communication & Support
+WhatsApp Button
+Floating WhatsApp chat button with pre-filled message for quick orders
+Live Chat
+AI-powered chat bot with human escalation during business hours
+Multi-language
+English and Telugu language toggle across the website
+FAQ Module
+Searchable FAQ covering products, delivery, subscriptions, and B2B queries
+Help Centre
+Self-service portal for returns, replacements, and account issues
+9.3 Marketing & Engagement
+Bundle Builder
+Custom bundle creator: pick products, choose frequency, name your box
+Product Comparison
+Side-by-side comparison of up to 3 products on nutrition, price, and usage
+Eco Impact Tracker
+Shows cumulative environmental benefit of customerâ€™s purchases
+Push Notifications
+Web push for flash sales, harvest alerts, and subscription reminders
+Email Automation
+Welcome series, abandoned cart, re-engagement, and subscription renewal flows
+Affiliate Programme
+Blogger and influencer affiliate tracking with commission dashboard
+10. Admin Dashboard
+Product Management
+Add, edit, archive products; manage variants, pricing, and inventory
+Farmer Management
+Onboard farmers, update certifications, manage harvest calendar
+Order Management
+View, process, ship, and track all orders; generate bulk shipping labels
+Subscription Management
+View all active subscribers, process renewals, handle pauses and cancellations
+B2B Quote Management
+Receive, respond, and convert bulk quote requests into orders
+Inventory Alerts
+Low-stock and out-of-stock alerts with reorder suggestions
+Analytics Dashboard
+Revenue, orders, top products, subscription churn, and farmer performance
+Customer Management
+CRM view of all customers with order history and segment tags
+Coupon Management
+Create, schedule, and track promotional codes and discount campaigns
+Content Management
+Edit homepage video, hero text, banners, blog posts, and recipe library
+11. Recommended Technology Stack
+Frontend
+Next.js 14 (React) for SSR, SEO, and fast page loads
+Backend
+Node.js with Express or NestJS; REST + GraphQL APIs
+Database
+PostgreSQL (primary), Redis (sessions/cache), Elasticsearch (product search)
+File Storage
+AWS S3 or Cloudflare R2 for product images and farmer photos
+Video Hosting
+Cloudflare Stream or Vimeo for hero video and recipe videos
+Payments
+Razorpay (India-first: UPI, EMI, cards, wallets)
+Authentication
+NextAuth.js with Google, Apple, and OTP providers
+Email & SMS
+SendGrid (email), Twilio or MSG91 (SMS/WhatsApp)
+Maps
+Mapbox GL JS for interactive farmer map with custom markers
+Analytics
+Google Analytics 4, Hotjar (heatmaps), and custom admin dashboard
+Hosting
+Vercel (frontend), AWS EC2 or Railway (backend), Cloudflare CDN
+Search
+Algolia or MeiliSearch for instant product and recipe search
+12. Non-Functional Requirements
+Performance
+Page load < 2.5 seconds on 4G; Core Web Vitals all green (LCP, FID, CLS)
+Mobile Responsiveness
+Pixel-perfect on iOS Safari and Android Chrome; minimum 320px width support
+SEO
+SSR for all product and blog pages; structured data (Schema.org) for products and recipes
+Security
+HTTPS everywhere, OWASP Top 10 compliance, PCI-DSS for payment flows
+Accessibility
+WCAG 2.1 AA compliance; keyboard navigation and screen reader support
+Uptime
+99.9% availability SLA; automated health checks every 60 seconds
+Scalability
+Architecture supports 10,000 concurrent users; horizontal scaling ready
+Data Privacy
+PDPB (India) compliant; GDPR-ready for export market; cookie consent banner
+13. Website Sitemap
+Primary Pages
+/ â€” Homepage (Video Hero, Farmer Database, Products, Subscription Teaser, Recipes, Reviews)
+/products â€” Product Catalogue (All Categories)
+/products/[category] â€” Category Listing Pages (8 categories)
+/product/[slug] â€” Individual Product Detail Pages
+/farmers â€” Farmer Database (Map + Grid View)
+/farmers/[id] â€” Individual Farmer Profile Pages
+/subscription â€” Subscription Plans & Box Builder
+/b2b â€” B2B / Industrial Buyer Portal
+/recipes â€” Recipe Library
+/blog â€” Nutrition & Wellness Blog
+Account Pages
+/account/dashboard â€” Order History, Points, Profile
+/account/subscriptions â€” Manage Active Subscriptions
+/account/wishlist â€” Saved Products
+/account/referrals â€” Referral Programme Dashboard
+Support Pages
+/contact â€” Contact Form + WhatsApp + Map
+/faq â€” Frequently Asked Questions
+/track-order â€” Public Order Tracking
+/about â€” Brand Story, Mission, Team
+/admin â€” Admin Dashboard (authenticated)
+14. Phased Rollout Plan
+Phase
+Timeline
+Key Deliverables
+Success Metric
+MVP
+Months 1-3
+Homepage, Product Catalogue, Cart, Checkout, Basic Auth
+First 100 orders
+Phase 2
+Months 4-6
+Farmer Database, Subscriptions, B2B Portal, Reviews
+200 subscribers
+Phase 3
+Months 7-9
+Recipe Library, Blog, Loyalty Points, Push Notifications
+10,000 monthly visits
+Phase 4
+Months 10-12
+Bundle Builder, Comparison Tool, Affiliate, Export Module
+B2B launch & export
+Document prepared for Avasan Chakra
+All content is confidential and proprietary to Avasan Chakra.
