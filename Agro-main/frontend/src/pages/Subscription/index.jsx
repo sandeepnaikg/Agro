@@ -3,10 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, Calendar, ShieldCheck, Gift, Check, ShoppingBag, Plus, Minus, ArrowRight, Trash2 } from 'lucide-react';
 import { useProducts } from '../../context/ProductContext';
 import { useCart } from '../../context/CartContext';
+import { useToast } from '../../context/ToastContext';
 import { getProductImage } from '../../utils/productImages';
 import ThemedButton from '../../components/common/ThemedButton';
 
 const Subscription = () => {
+  const { showToast } = useToast();
   const { products } = useProducts();
   const { addToCart } = useCart();
 
@@ -50,7 +52,7 @@ const Subscription = () => {
   const handleAddToBox = (product) => {
     const totalCount = boxItems.reduce((sum, item) => sum + item.quantity, 0);
     if (totalCount >= currentTier.limit) {
-      alert(`Your ${currentTier.name} is full! Remove items or upgrade to a higher tier.`);
+      showToast(`Your ${currentTier.name} is full! Remove items or upgrade to a higher tier.`, 'error');
       return;
     }
 
@@ -74,7 +76,7 @@ const Subscription = () => {
 
     const totalCount = boxItems.reduce((sum, item) => sum + item.quantity, 0);
     if (delta > 0 && totalCount >= currentTier.limit) {
-      alert(`Your ${currentTier.name} is full!`);
+      showToast(`Your ${currentTier.name} is full!`, 'error');
       return;
     }
 
@@ -111,7 +113,7 @@ const Subscription = () => {
 
   const handleSubscribe = () => {
     if (boxItems.length === 0) {
-      alert('Please add at least one product to your box before subscribing.');
+      showToast('Please add at least one product to your box before subscribing.', 'error');
       return;
     }
 

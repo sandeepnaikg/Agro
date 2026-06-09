@@ -4,6 +4,11 @@ import { Leaf, Award, Recycle, Users, ArrowRight, ShieldCheck, Heart, Sparkles, 
 import ThemedButton from '../../components/common/ThemedButton';
 import { useNavigate, Link } from 'react-router-dom';
 
+// Blog Sourcing Images for SCM section
+import fieldSurveyImg from '../../assets/blog/field-survey.jpg';
+import farmersMeetingImg from '../../assets/blog/farmers-meeting.jpg';
+import farmerTrainingImg from '../../assets/blog/farmer-training.jpg';
+
 const About = () => {
   const navigate = useNavigate();
 
@@ -91,6 +96,91 @@ const About = () => {
               <div className="flex justify-between items-center py-2">
                 <span className="text-stone-400">Average Processing Speed</span>
                 <span className="text-primary font-bold">Within 4 Hours of Harvest</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Field Campaigns & Rural Impact */}
+        <section className="space-y-10">
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <span className="label-tech text-secondary font-bold tracking-[0.2em] uppercase">Field Work</span>
+            <h2 className="text-primary font-heading font-bold mb-0">Our Field Campaigns & Rural Impact</h2>
+            <p className="text-stone-500 text-sm leading-relaxed max-w-2xl mx-auto">
+              Avasan Chakra in action: Empowering growers and building decentralized processing clusters across Telangana.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Card 1 */}
+            <div className="bg-white rounded-[32px] overflow-hidden shadow-ambient border border-stone-100 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group">
+              <div>
+                <div className="w-full h-52 overflow-hidden bg-parchment relative shrink-0">
+                  <img 
+                    src={fieldSurveyImg} 
+                    alt="Direct Farmer Sourcing" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <span className="absolute top-4 left-4 bg-primary text-white text-[8px] font-bold label-tech px-3 py-1.5 rounded-full shadow-sm">
+                    FIELD SOURCING
+                  </span>
+                </div>
+                <div className="p-6 space-y-3">
+                  <h3 className="text-base text-primary font-heading font-bold mb-1">
+                    Direct Farmer Sourcing
+                  </h3>
+                  <p className="text-stone-500 text-xs leading-relaxed font-medium">
+                    Working directly with smallholders in Siddipet and nearby village clusters to verify organic crops, helping growers save up to 40% of their harvest yields.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white rounded-[32px] overflow-hidden shadow-ambient border border-stone-100 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group">
+              <div>
+                <div className="w-full h-52 overflow-hidden bg-parchment relative shrink-0">
+                  <img 
+                    src={farmersMeetingImg} 
+                    alt="Rural Training & Cooperatives" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <span className="absolute top-4 left-4 bg-secondary text-white text-[8px] font-bold label-tech px-3 py-1.5 rounded-full shadow-sm">
+                    FARMER TRAINING
+                  </span>
+                </div>
+                <div className="p-6 space-y-3">
+                  <h3 className="text-base text-primary font-heading font-bold mb-1">
+                    Rural Training & Cooperatives
+                  </h3>
+                  <p className="text-stone-500 text-xs leading-relaxed font-medium">
+                    Conducting village-level workshops to train farmers on moisture control, decentralized dehydration standards, and digital ledger verification.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white rounded-[32px] overflow-hidden shadow-ambient border border-stone-100 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group">
+              <div>
+                <div className="w-full h-52 overflow-hidden bg-parchment relative shrink-0">
+                  <img 
+                    src={farmerTrainingImg} 
+                    alt="Women Cooperative Processing" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <span className="absolute top-4 left-4 bg-primary text-white text-[8px] font-bold label-tech px-3 py-1.5 rounded-full shadow-sm">
+                    COMMUNITY IMPACT
+                  </span>
+                </div>
+                <div className="p-6 space-y-3">
+                  <h3 className="text-base text-primary font-heading font-bold mb-1">
+                    Women Cooperative Processing
+                  </h3>
+                  <p className="text-stone-500 text-xs leading-relaxed font-medium">
+                    Engaging and training women self-help groups in agricultural processing, enhancing rural secondary incomes and supporting zero-waste operations.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

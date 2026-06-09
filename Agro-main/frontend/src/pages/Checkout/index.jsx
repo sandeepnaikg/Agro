@@ -138,7 +138,7 @@ const Checkout = () => {
               {/* Delivery Time Slots */}
               <div className="space-y-4">
                 <h3 className="text-lg text-primary font-heading font-bold border-b border-stone-50 pb-2">2. Delivery Window</h3>
-                <div className="grid grid-cols-3 gap-4 text-xs font-bold font-heading">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-bold font-heading">
                   {[
                     { id: 'Morning', label: 'Morning Slot', desc: '8 AM - 12 PM' },
                     { id: 'Afternoon', label: 'Afternoon Slot', desc: '12 PM - 4 PM' },

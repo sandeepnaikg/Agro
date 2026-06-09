@@ -3,6 +3,25 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { BookOpen, Clock, Calendar, ArrowLeft, ArrowRight, ShieldCheck, ChevronRight, X } from 'lucide-react';
 import ThemedButton from '../../components/common/ThemedButton';
 
+// Blog Image Assets
+import fieldSurveyImg from '../../assets/blog/field-survey.jpg';
+import farmersMeetingImg from '../../assets/blog/farmers-meeting.jpg';
+import farmerDiscussionImg from '../../assets/blog/farmer-discussion.jpg';
+import farmerTrainingImg from '../../assets/blog/farmer-training.jpg';
+import cropHarvestImg from '../../assets/blog/crop-harvest.jpg';
+import moringaFieldImg from '../../assets/blog/moringa-field.jpg';
+import fieldSelfieImg from '../../assets/blog/field-selfie.jpg';
+
+const BLOG_IMAGES = {
+  'field-survey': fieldSurveyImg,
+  'farmers-meeting': farmersMeetingImg,
+  'farmer-discussion': farmerDiscussionImg,
+  'farmer-training': farmerTrainingImg,
+  'crop-harvest': cropHarvestImg,
+  'moringa-field': moringaFieldImg,
+  'field-selfie': fieldSelfieImg,
+};
+
 const Blog = () => {
   const [selectedArticle, setSelectedArticle] = useState(null);
 
@@ -14,11 +33,28 @@ const Blog = () => {
       date: 'June 05, 2026',
       readTime: '6 mins read',
       author: 'Dr. Ramesh Chandra, Food Research Lead',
+      image: 'crop-harvest',
       summary: 'Explore how convective low-temperature drying loops lock in crop minerals, fiber, and raw antioxidants compared to high-heat boiling or sun-bleaching.',
       content: [
         'Convective dehydration operates by passing controlled, heated air flows over raw agricultural biomass. Unlike conventional boiling or high-heat canning, convective processes maintain the crop environment below critical thermal thresholds. This is especially vital for heat-sensitive compounds like Vitamin C, Vitamin A, and delicate betalain pigments.',
         'At our decentralized collecting hubs, crops are loaded into solar thermal dehydration chambers within 4 hours of harvest. By locking the ambient air temperature at precisely 45°C, we evaporate free moisture without breaking down cellular wall structures or thermal enzymes.',
         'The resulting dry biomass holds a residual moisture level of less than 5.0%. When ground into mesh powders, the concentration index rises—10 grams of Moringa leaf powder offers the nutrient equivalent of 100 grams of fresh leaves, making active nutrition accessible in modern household cooking.'
+      ]
+    },
+    {
+      id: 'art-fieldwork-diaries',
+      title: 'Fieldwork Diaries: Sourcing, SCM Transparency, and Dehydration Training',
+      category: 'Fieldwork',
+      date: 'June 09, 2026',
+      readTime: '5 mins read',
+      author: 'Sandeep Naik, SCM Director',
+      image: 'field-survey',
+      images: ['field-survey', 'farmers-meeting', 'farmer-discussion', 'farmer-training', 'crop-harvest', 'moringa-field', 'field-selfie'],
+      summary: 'Go behind the scenes of our village-level sourcing operations, direct training workshops, and okra & tomato harvest collections in Telangana.',
+      content: [
+        'At Avasan Chakra, we believe that true transparency starts on the ground. Sourcing dehydrated vegetables and fruits directly from 12,000+ growers requires rigorous field training, logistics synchronization, and group alignment at the farm gate. In our recent fieldwork loop through village clusters in Siddipet and Yadadri, our team conducted hands-on audits and safety training sessions.',
+        'During our community workshops, we gathered with hundreds of local farmers in local village halls. Sourcing surplus crops during gluts prevents agricultural waste while doubling farm income. We explained how our micro-dehydration hubs process fresh crops within 4 hours of harvest, locking in 98% of vitamins and antioxidants.',
+        'Quality control is crucial. Our team worked directly with farmers in the fields, inspecting organic crop health (such as fresh okra and tomatoes) and detailing molecular moisture requirements. We also organized sanitation training, introducing hygienic hairnets, gloves, and eco-pouch packing procedures to guarantee export-grade purity.'
       ]
     },
     {
@@ -28,6 +64,7 @@ const Blog = () => {
       date: 'May 28, 2026',
       readTime: '8 mins read',
       author: 'Saroja M., Sustainable SCM Officer',
+      image: 'farmers-meeting',
       summary: 'Every year, visual crop defects and seasonal bumper gluts cause up to 40% harvest waste in Telangana mandis. Here is how direct farm gate collection alters smallholder economics.',
       content: [
         'Harvest gluts in local mandis frequently trigger catastrophic price drops. When supply peaks, buyers decrease bids, forcing farmers to dump perfectly nutritious crops due to shape anomalies or surplus transport costs. Simultaneously, post-harvest stalks (like cotton stalks or millet husks) are burned, emitting toxic plumes across rural villages.',
@@ -37,11 +74,12 @@ const Blog = () => {
     },
     {
       id: 'art-beetroot-nitrates',
-      title: 'Beetroot Nitrates: The Natural stamina secret for Active Lifestyles',
+      title: 'Beetroot Nitrates: The Natural Stamina Secret for Active Lifestyles',
       category: 'Nutrition',
       date: 'May 15, 2026',
       readTime: '5 mins read',
       author: 'Anitha Chenna, Nutritionist & SCM Liaison',
+      image: 'field-selfie',
       summary: 'Understanding the bio-mechanisms of organic beetroot nitrates in oxygen transport, cardio stamina, and muscle fatigue recovery.',
       content: [
         'Beetroots are naturally rich in inorganic nitrates (NO3-). When consumed, oral bacteria and stomach enzymes reduce these nitrates into nitrites (NO2-) and eventually into nitric oxide (NO) in the bloodstream.',
@@ -56,6 +94,7 @@ const Blog = () => {
       date: 'April 20, 2026',
       readTime: '7 mins read',
       author: 'Shastri Ramakrishna, Ayurvedic Advisor',
+      image: 'moringa-field',
       summary: 'Known as the "Shigru" in classical texts, Moringa has been used for centuries to address inflammation, joint comfort, and digestive fire.',
       content: [
         'In classical Ayurvedic texts, Moringa (Shigru) is categorized as a heating, pungent herb that pacifies Kapha and Vata doshas. Its traditional uses encompass joint support, toxin removal (ama-pachana), and strengthening digestive fire (agni).',
@@ -82,7 +121,7 @@ const Blog = () => {
         {articles.length > 0 && (
           <section 
             onClick={() => setSelectedArticle(articles[0])}
-            className="bg-[#23422A] text-white rounded-[40px] p-8 md:p-12 shadow-ambient border border-white/10 flex flex-col md:flex-row justify-between items-center gap-8 hover:shadow-2xl transition-all duration-500 cursor-pointer"
+            className="bg-[#23422A] text-white rounded-[40px] p-8 md:p-12 shadow-ambient border border-white/10 flex flex-col lg:flex-row justify-between items-center gap-8 hover:shadow-2xl transition-all duration-500 cursor-pointer overflow-hidden"
           >
             <div className="space-y-4 max-w-2xl">
               <div className="flex items-center gap-3 text-[10px] text-secondary-container font-bold label-tech">
@@ -97,9 +136,15 @@ const Blog = () => {
                 {articles[0].summary}
               </p>
             </div>
-            <button className="bg-white text-primary hover:bg-stone-50 px-6 py-3.5 rounded-xl font-bold label-tech text-xs transition-all uppercase shrink-0 shadow-md flex items-center gap-1.5 cursor-pointer">
-              Read Article <ArrowRight size={14} />
-            </button>
+            {articles[0].image && (
+              <div className="w-full lg:w-56 h-40 rounded-2xl overflow-hidden bg-white/10 shrink-0 relative border border-white/10 shadow-sm">
+                <img 
+                  src={BLOG_IMAGES[articles[0].image]} 
+                  alt={articles[0].title} 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            )}
           </section>
         )}
 
@@ -109,24 +154,36 @@ const Blog = () => {
             <div 
               key={art.id}
               onClick={() => setSelectedArticle(art)}
-              className="bg-white rounded-[32px] p-6 shadow-ambient border border-stone-100 flex flex-col justify-between hover:shadow-xl transition-all duration-300 cursor-pointer group"
+              className="bg-white rounded-[32px] overflow-hidden shadow-ambient border border-stone-100 flex flex-col justify-between hover:shadow-xl transition-all duration-300 cursor-pointer group"
             >
-              <div className="space-y-4">
-                <div className="flex justify-between items-center text-[9px] text-stone-400 font-bold label-tech">
-                  <span className="text-secondary">{art.category}</span>
-                  <span>{art.readTime}</span>
+              <div>
+                {art.image && (
+                  <div className="w-full h-48 overflow-hidden bg-parchment relative shrink-0">
+                    <img 
+                      src={BLOG_IMAGES[art.image]} 
+                      alt={art.title} 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                  </div>
+                )}
+                <div className="p-6 space-y-4">
+                  <div className="flex justify-between items-center text-[9px] text-stone-400 font-bold label-tech">
+                    <span className="text-secondary">{art.category}</span>
+                    <span>{art.readTime}</span>
+                  </div>
+
+                  <h3 className="text-base text-primary font-heading font-bold mb-2 group-hover:text-secondary transition-colors line-clamp-2">
+                    {art.title}
+                  </h3>
+
+                  <p className="text-stone-500 text-xs leading-relaxed line-clamp-3">
+                    {art.summary}
+                  </p>
                 </div>
-
-                <h3 className="text-base text-primary font-heading font-bold mb-2 group-hover:text-secondary transition-colors">
-                  {art.title}
-                </h3>
-
-                <p className="text-stone-500 text-xs leading-relaxed line-clamp-3">
-                  {art.summary}
-                </p>
               </div>
 
-              <div className="flex justify-between items-center pt-4 mt-6 border-t border-stone-50 text-[9px] font-bold label-tech text-stone-400">
+              <div className="px-6 pb-6 pt-4 border-t border-stone-50 text-[9px] font-bold label-tech text-stone-400 flex justify-between items-center">
                 <span>By {art.author.split(',')[0]}</span>
                 <span className="text-primary group-hover:translate-x-1 transition-transform flex items-center gap-1">
                   READ MORE <ChevronRight size={12} />
@@ -150,7 +207,7 @@ const Blog = () => {
                 initial={{ scale: 0.95, y: 15 }}
                 animate={{ scale: 1, y: 0 }}
                 exit={{ scale: 0.95, y: 15 }}
-                className="bg-white rounded-[40px] p-8 md:p-10 max-w-2xl w-full shadow-2xl border border-stone-100 max-h-[85vh] overflow-y-auto space-y-6 relative"
+                className="bg-white rounded-[40px] p-8 md:p-10 max-w-2xl w-full shadow-2xl border border-stone-100 max-h-[85vh] overflow-y-auto space-y-6 relative scrollbar-hide"
                 onClick={e => e.stopPropagation()}
               >
                 {/* Close Button */}
@@ -178,6 +235,27 @@ const Blog = () => {
                     <p key={idx}>{p}</p>
                   ))}
                 </div>
+
+                {/* Image Gallery / Grid for Fieldwork */}
+                {selectedArticle.images && (
+                  <div className="space-y-3 pt-4 border-t border-stone-100">
+                    <h4 className="font-heading font-bold text-primary text-xs uppercase tracking-wide label-tech">Fieldwork Gallery</h4>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                      {selectedArticle.images.map((imgKey, index) => (
+                        <div 
+                          key={index}
+                          className="aspect-[4/3] rounded-xl overflow-hidden border border-stone-100 shadow-sm cursor-zoom-in hover:scale-[1.02] transition-transform duration-300"
+                        >
+                          <img 
+                            src={BLOG_IMAGES[imgKey]} 
+                            alt={`Avasan Fieldwork ${index + 1}`} 
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 {/* Quality Standard badge */}
                 <div className="bg-stone-50 border border-stone-100 rounded-2xl p-4 flex items-center gap-3 text-[10px] font-bold label-tech text-stone-500 justify-center">

@@ -6,7 +6,7 @@ import { useCart } from '../../context/CartContext';
 import { useFarmers } from '../../context/FarmerContext';
 import { getProductImage } from '../../utils/productImages';
 import ThemedButton from '../../components/common/ThemedButton';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const categories = [
   "All Products",
@@ -24,12 +24,21 @@ const Products = () => {
   const { products } = useProducts();
   const { addToCart, toggleWishlist, wishlistHas } = useCart();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [activeCategory, setActiveCategory] = useState("All Products");
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState(location.state?.query || "");
   const [sortBy, setSortBy] = useState("alphabetical"); // alphabetical, price-low, price-high
   const [showSpecsId, setShowSpecsId] = useState(null);
   const [visibleCount, setVisibleCount] = useState(8);
+
+  useEffect(() => {
+    if (location.state?.query !== undefined) {
+      setSearchQuery(location.state.query);
+      // Clean up state to prevent persistent searches on navigation reloading
+      window.history.replaceState({}, document.title);
+    }
+  }, [location.state]);
 
   useEffect(() => {
     setVisibleCount(8);
@@ -82,7 +91,11 @@ const Products = () => {
     });
 
   return (
-    <div className="flex flex-col min-h-screen bg-surface page-offset-top">
+    <div className="flex flex-col min-h-screen bg-surface page-offset-top relative z-0 overflow-hidden">
+      {/* Ambient background blur blobs */}
+      <div className="absolute top-[10%] left-[-10%] w-[400px] h-[400px] rounded-full bg-primary-light/5 blur-[120px] pointer-events-none -z-10" />
+      <div className="absolute top-[50%] right-[-10%] w-[500px] h-[500px] rounded-full bg-secondary/5 blur-[130px] pointer-events-none -z-10" />
+      <div className="absolute bottom-[10%] left-[20%] w-[450px] h-[450px] rounded-full bg-primary-light/5 blur-[120px] pointer-events-none -z-10" />
       {/* Header & Filter Section */}
       <section className="px-8 md:px-16 lg:px-24 pt-16 pb-8 max-w-7xl mx-auto w-full">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12 mb-12">
@@ -196,19 +209,27 @@ const Products = () => {
 
         {/* Categories Tabs */}
         <div className="flex flex-wrap gap-3 overflow-x-auto pb-4 scrollbar-hide">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-6 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all cursor-pointer ${
-                activeCategory === cat 
-                  ? 'bg-primary text-white shadow-lg' 
-                  : 'bg-white text-primary/60 border border-stone-100 hover:bg-primary/5'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
+          {categories.map((cat) => {
+            const isSelected = activeCategory === cat;
+            return (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className="relative px-6 py-2.5 rounded-full text-xs font-bold tracking-wide transition-colors duration-300 cursor-pointer shrink-0"
+              >
+                {isSelected && (
+                  <motion.span
+                    layoutId="activeProductsCategory"
+                    className="absolute inset-0 bg-primary rounded-full shadow-lg z-0"
+                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                  />
+                )}
+                <span className={`relative z-10 ${isSelected ? 'text-white' : 'text-primary/60 hover:text-primary'}`}>
+                  {cat}
+                </span>
+              </button>
+            );
+          })}
         </div>
       </section>
 

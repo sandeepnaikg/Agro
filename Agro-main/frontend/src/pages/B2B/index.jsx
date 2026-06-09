@@ -68,7 +68,7 @@ const B2B = () => {
   };
 
   return (
-    <div className="min-h-screen bg-surface pt-[100px] pb-24 px-8 md:px-16 lg:px-24">
+    <div className="min-h-screen bg-surface page-offset-top pb-24 px-8 md:px-16 lg:px-24">
       <div className="max-w-7xl mx-auto space-y-12">
         
         {/* Banner */}

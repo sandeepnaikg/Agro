@@ -157,11 +157,9 @@ const Recipes = () => {
     const product = products.find(p => p.id === productId);
     if (product) {
       addToCart(product, 'Powder', 100, 1);
-      alert(`${name} added to cart!`);
     } else {
       // Fallback if not matching context exactly
       addToCart({ id: productId, name, price: '₹500 / kg' }, 'Powder', 100, 1);
-      alert(`${name} added to cart!`);
     }
   };
 

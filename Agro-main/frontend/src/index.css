@@ -50,9 +50,60 @@
     @apply bg-surface-muted;
   }
 
+  /* Custom organic scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FAF8F4;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2D5A3D; /* primary-light */
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B85C38; /* secondary */
+  }
+
+  /* Glassmorphism headers */
+  .glass-navbar {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(27, 61, 42, 0.08);
+  }
+
+  .glass-utility {
+    background: rgba(27, 61, 42, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
   .product-card {
     @apply bg-white rounded-card p-5 shadow-card border border-stone-100/80
-           hover:shadow-card-hover hover:border-primary/10 transition-all duration-300;
+           hover:shadow-card-hover transition-all duration-500 relative overflow-hidden;
+  }
+
+  /* Dynamic gradient border glow on card hover */
+  .product-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.5px;
+    background: linear-gradient(135deg, rgba(184, 92, 56, 0.3) 0%, rgba(27, 61, 42, 0.2) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+
+  .product-card:hover::before {
+    opacity: 1;
   }
 
   .product-img-wrap {
@@ -61,12 +112,12 @@
   }
 
   .product-img {
-    @apply w-full h-full object-contain group-hover:scale-105 transition-transform duration-500;
+    @apply w-full h-full object-contain group-hover:scale-105 transition-transform duration-700;
   }
 
   .trust-card {
     @apply bg-white rounded-3xl p-6 shadow-card border border-stone-100/80
-           hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-300;
+           hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300;
   }
 
   .badge-cert {
@@ -86,9 +137,9 @@
     @apply bg-white/80 backdrop-blur-md border border-white/40;
   }
 
-  /* utility bar (36px) + navbar (68px) */
+  /* utility bar (36px) + navbar (68px) + elegant padding spacing (36px) */
   .page-offset-top {
-    @apply pt-[106px];
+    @apply pt-[140px];
   }
 }
 

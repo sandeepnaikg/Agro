@@ -1,10 +1,12 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { useToast } from './ToastContext';
 
 const CartContext = createContext();
 
 export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
+  const { showToast } = useToast();
   const [cart, setCart] = useState([]);
   const [wishlist, setWishlist] = useState([]);
 
@@ -64,6 +66,7 @@ export const CartProvider = ({ children }) => {
       };
       saveCart([...cart, newItem]);
     }
+    showToast(`Added ${qty} × ${product.name} (${weight}g) to basket!`, 'success');
   };
 
   // Update quantity in cart table
@@ -118,13 +121,18 @@ export const CartProvider = ({ children }) => {
 
   // Remove from basket
   const removeFromCart = (itemId) => {
+    const item = cart.find(i => i.id === itemId);
     const newCart = cart.filter(item => item.id !== itemId);
     saveCart(newCart);
+    if (item) {
+      showToast(`Removed ${item.name} from basket.`, 'info');
+    }
   };
 
   // Empty basket
   const clearCart = () => {
     saveCart([]);
+    showToast('Basket cleared.', 'info');
   };
 
   // Wishlist controls
@@ -132,8 +140,10 @@ export const CartProvider = ({ children }) => {
     if (wishlist.includes(productId)) {
       const newWish = wishlist.filter(id => id !== productId);
       saveWishlist(newWish);
+      showToast('Removed from wishlist.', 'info');
     } else {
       saveWishlist([...wishlist, productId]);
+      showToast('Added to wishlist!', 'success');
     }
   };
 

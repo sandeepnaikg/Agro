@@ -10,7 +10,7 @@ import { ScrollReveal, StaggerGrid, StaggerItem } from '../../components/common/
 import { getProductImage } from '../../utils/productImages';
 import { useProducts } from '../../context/ProductContext';
 import { useFarmers } from '../../context/FarmerContext';
-import heroImg from '../../assets/hero.jpg';
+import heroImg from '../../assets/hero.png';
 
 const HOME_CATEGORIES = ['All', 'Vegetable Powders', 'Fruit Powders', 'Seed Products', 'Leaf & Soft Dry', 'Biomass & Waste'];
 
@@ -98,7 +98,11 @@ const Home = () => {
     .slice(0, 4);
 
   return (
-    <div className="flex flex-col min-h-screen bg-surface">
+    <div className="flex flex-col min-h-screen bg-surface relative z-0 overflow-hidden">
+      {/* Ambient background blur blobs */}
+      <div className="absolute top-[15%] left-0 w-[450px] h-[450px] rounded-full bg-primary-light/5 blur-[120px] pointer-events-none -z-10" />
+      <div className="absolute top-[45%] right-0 w-[500px] h-[500px] rounded-full bg-secondary/5 blur-[140px] pointer-events-none -z-10" />
+      <div className="absolute bottom-[20%] left-1/3 w-[600px] h-[600px] rounded-full bg-primary-light/5 blur-[160px] pointer-events-none -z-10" />
       {/* ── HERO (left-aligned, reference-inspired) ── */}
       <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -294,7 +298,9 @@ const Home = () => {
                 >
                   <span className="text-5xl font-heading font-bold text-primary/8 absolute top-4 right-6">{s.step}</span>
                   {i < PROCESS_STEPS.length - 1 && (
-                    <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-primary/20 to-transparent z-10" />
+                    <div className="hidden lg:block absolute top-[45%] -right-6 w-7 h-[2px] z-10">
+                      <div className="w-full h-full border-t-2 border-dashed border-secondary/35" />
+                    </div>
                   )}
                   <h3 className="text-lg text-primary font-bold mb-2 relative">{s.title}</h3>
                   <p className="text-stone-500 text-sm leading-relaxed relative">{s.desc}</p>
@@ -422,18 +428,27 @@ const Home = () => {
 
           <ScrollReveal delay={0.1}>
             <div className="flex gap-2 overflow-x-auto pb-4 mb-8 scrollbar-hide">
-              {HOME_CATEGORIES.map((cat) => (
-                <motion.button
-                  key={cat}
-                  whileTap={{ scale: 0.96 }}
-                  onClick={() => setActiveCategory(cat)}
-                  className={`px-5 py-2.5 rounded-full text-[10px] font-bold label-tech whitespace-nowrap transition-all duration-300 shrink-0 ${
-                    activeCategory === cat ? 'bg-primary text-white shadow-md' : 'bg-white text-primary/60 border border-stone-100 hover:bg-primary/5'
-                  }`}
-                >
-                  {cat.toUpperCase()}
-                </motion.button>
-              ))}
+              {HOME_CATEGORIES.map((cat) => {
+                const isSelected = activeCategory === cat;
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => setActiveCategory(cat)}
+                    className="relative px-5 py-2.5 rounded-full text-[10px] font-bold label-tech whitespace-nowrap transition-colors duration-300 shrink-0 cursor-pointer"
+                  >
+                    {isSelected && (
+                      <motion.span
+                        layoutId="activeHomeCategory"
+                        className="absolute inset-0 bg-primary rounded-full shadow-md z-0"
+                        transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                      />
+                    )}
+                    <span className={`relative z-10 ${isSelected ? 'text-white' : 'text-primary/60 hover:text-primary'}`}>
+                      {cat.toUpperCase()}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
           </ScrollReveal>
 

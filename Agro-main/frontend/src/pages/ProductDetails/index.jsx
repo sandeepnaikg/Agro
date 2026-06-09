@@ -34,7 +34,7 @@ const ProductDetails = () => {
 
   if (!product) {
     return (
-      <div className="min-h-screen bg-surface flex flex-col items-center justify-center pt-[100px] px-8">
+      <div className="min-h-screen bg-surface flex flex-col items-center justify-center page-offset-top px-8">
         <div className="text-center space-y-6 max-w-md">
           <Info size={48} className="text-secondary mx-auto" />
           <h2 className="text-2xl text-primary font-bold">Product Not Found</h2>
@@ -104,7 +104,10 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="min-h-screen bg-surface pt-[100px] pb-24 px-8 md:px-16 lg:px-24">
+    <div className="min-h-screen bg-surface page-offset-top pb-24 px-8 md:px-16 lg:px-24 relative z-0 overflow-hidden">
+      {/* Ambient background blur blobs */}
+      <div className="absolute top-[15%] left-[-10%] w-[380px] h-[380px] rounded-full bg-primary-light/5 blur-[120px] pointer-events-none -z-10" />
+      <div className="absolute bottom-[20%] right-[-10%] w-[450px] h-[450px] rounded-full bg-secondary/5 blur-[130px] pointer-events-none -z-10" />
       <div className="max-w-7xl mx-auto">
         {/* Breadcrumbs */}
         <div className="flex items-center gap-2 text-stone-500 font-bold text-[10px] label-tech mb-8 tracking-widest uppercase">
@@ -204,7 +207,7 @@ const ProductDetails = () => {
               {/* Form Selector (Powder vs Dried) */}
               <div className="space-y-2">
                 <label className="label-tech text-[10px] text-stone-400 font-bold block uppercase tracking-wider">Select Form</label>
-                <div className="flex gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {[
                     { id: 'Powder', label: 'Powder Form', desc: 'Micro-pulverized extract' },
                     { id: 'Dried', label: 'Dried Form', desc: 'Stabilized whole pieces (-10% price)' }
@@ -228,7 +231,7 @@ const ProductDetails = () => {
               {/* Weight Selector */}
               <div className="space-y-2">
                 <label className="label-tech text-[10px] text-stone-400 font-bold block uppercase tracking-wider">Select Weight / Quantity Pack</label>
-                <div className="grid grid-cols-4 gap-3 font-semibold">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 font-semibold">
                   {[
                     { value: 100, label: '100 g' },
                     { value: 200, label: '200 g' },
@@ -349,19 +352,27 @@ const ProductDetails = () => {
               { id: 'specs', label: 'Technical Data' },
               { id: 'uses', label: 'Uses & Benefits' },
               { id: 'processing', label: 'Sourcing & Processing' }
-            ].map(tab => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-2 border-b-2 transition-all uppercase cursor-pointer whitespace-nowrap ${
-                  activeTab === tab.id
-                    ? 'border-secondary text-primary font-bold'
-                    : 'border-transparent text-stone-400 hover:text-primary'
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
+            ].map(tab => {
+              const isSelected = activeTab === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`relative px-6 py-2 transition-all uppercase cursor-pointer whitespace-nowrap ${
+                    isSelected ? 'text-primary font-bold' : 'text-stone-400 hover:text-primary'
+                  }`}
+                >
+                  {tab.label}
+                  {isSelected && (
+                    <motion.span
+                      layoutId="activeDetailsTab"
+                      className="absolute bottom-0 left-6 right-6 h-0.5 bg-secondary rounded-full"
+                      transition={{ type: 'spring', stiffness: 350, damping: 25 }}
+                    />
+                  )}
+                </button>
+              );
+            })}
           </div>
 
           <AnimatePresence mode="wait">

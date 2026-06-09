@@ -168,7 +168,7 @@ const Admin = () => {
             </div>
           </div>
           
-          <div className="flex bg-white p-1 rounded-xl shadow-sm border border-stone-100 text-xs font-bold label-tech">
+          <div className="flex flex-wrap md:flex-row bg-white p-1 rounded-xl shadow-sm border border-stone-100 text-xs font-bold label-tech gap-1 w-full md:w-auto justify-center md:justify-start">
             {[
               { id: 'analytics', label: 'Overview', icon: <BarChart3 size={14} /> },
               { id: 'inventory', label: 'Inventory', icon: <Package size={14} /> },
